@@ -1,0 +1,48 @@
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta charset="utf-8">
+    <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <link rel="icon" href="<%= BASE_URL %>favicon.ico">
+    <title>田一监控系统</title>
+    <script src="./jiankong.js"></script>
+    <script language="javascript" for="myOcx" event="onReceivePublishMsg(header,content)" type="text/javascript">
+      TreateReceivePublishMsg(header, content);
+    </script>
+    <script language="javascript" for="myOcx" event="onRegStatus_EventChanged(regstatus, statuscode)"
+      type="text/javascript">
+      onRegStatusChanged(regstatus, statuscode);
+    </script>
+    <script language="javascript" for="myOcx"
+      event="onCallStatus_EventChanged(mynum, othersidenum, callid, callstatus, isvideo)" type="text/javascript">
+      onCallStatusChanged(mynum, othersidenum, callid, callstatus, isvideo);
+    </script>
+    <script language="javascript" for="myOcx"
+      event="onIncomingCall_Event(mynum, othersidenum, callid, callstatus, isvideo)" type="text/javascript">
+      onIncomingCall(mynum, othersidenum, callid, callstatus, isvideo);
+    </script>
+    <script language="javascript" for="myOcx"
+      event="onCallSession_EventChanged(mynum, othersidenum, strcallid, callstatus, isvideo, calltype)"
+      type="text/javascript">
+      onCallSessionChanged(mynum, othersidenum, strcallid, callstatus, isvideo, calltype);
+    </script>
+    <script language="javascript" for="myOcx" event="onErrorMsg_EventChanged(errCode, errDesc)" type="text/javascript">
+      onErrorMsgChanged(errCode, errDesc);
+    </script>
+    <script language="javascript" for="myOcx" event="onMsgReceived(number, content)" type="text/javascript">
+      onReceiveMsg(number, content);
+    </script>
+  </head>
+  <body>
+    <noscript>
+      <strong>We're sorry but jiankong doesn't work properly without JavaScript enabled. Please enable it to continue.</strong>
+    </noscript>
+    
+    
+    <div id="app"></div>
+    <object id="myOcx" width="1" height="1" codebase="./DTClient.cab#version=1,0,0,1" classid="clsid:1AEF5D45-E61F-44DF-B862-8F005038D4F8"></object>
+    
+       
+    <!-- built files will be auto injected -->
+  </body>
+</html>
